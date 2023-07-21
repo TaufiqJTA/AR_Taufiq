@@ -9,10 +9,11 @@
         <a-scene vr-mode-ui="enabled:false;"renderer="logarithmicDepthBuffer: true; precision:medium;"embeddedarjs="trackingMethod:best; sourceType: webcam; debugUIEnabled:false">
             <a-assets>
                 <img id="my-image" src="image/Taufiq1.jpeg">
+                <a-asset-item id="model" src="model/nova.glb"></a-asset-item>
             </a-assets>
             <a-marker preset="custom"type="pattern"url="pattern/pattern-asia.patt">
-                <a-sphere material="src:#earth"position="0 1 0"animation="property:rotation;from:0 0 0; to: 0 0 360; loop:true"></a-sphere>
-                <a-entity gltf-model="model/nova.glb"scale="30 30 30"position="0 10 20"rotation="0 90 270"></a-entity>
+                <a-image src="#foto" height="1" width="1" position="-1 0 0" rotation="-120 0 0"></a-image><a-image>
+                <a-entity gltf-model="#model"scale="0.01 0.01 0.01"position="1 0 0"rotation="120 0 0"></a-entity>
             </a-marker>
             <a-entity camera></a-entity>
         </a-scene>
